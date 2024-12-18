@@ -6,3 +6,11 @@ __pycache__/
 *.csv
 *.joblib
 *.pkl
+.env
+*.log
+Thumbs.db
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+%USERPROFILE%.pyenv
