@@ -11,18 +11,22 @@ import os
 
 app = FastAPI()
 
+current_directory = os.path.dirname(os.path.abspath(__file__))
+model_path = os.path.join(current_directory, "Best_model", "XGB_classifier_model.joblib")
 # Charger le modèle
-model = joblib.load("XGB_classifier_model.joblib")
+model = joblib.load(model_path)
 
 # Charger des données
-data = pd.read_csv("df_train1.csv")
+csv_path = os.path.join(current_directory, "Data", "df_train1.csv")
+data = pd.read_csv(csv_path)
+
 data['SK_ID_CURR'] = data['SK_ID_CURR'].astype(str)
 
 @app.get("/")
 def read_root():
     return {"message": "API de prédiction d'approbation de crédit"}
 
-@app.post("/predict/")
+@app.post("/predict")
 def predict(sk_id_curr: str = Query(..., description="L'identifiant client"),
             top_n: int = Query(10, description="Nombre de features principales à afficher")):
     """

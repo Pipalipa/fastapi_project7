@@ -1,0 +1,16 @@
+.venv/
+project_7_env/
+__pycache__/
+*.pyc
+*.pyo
+*.csv
+*.joblib
+*.pkl
+.env
+*.log
+Thumbs.db
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+%USERPROFILE%.pyenv
