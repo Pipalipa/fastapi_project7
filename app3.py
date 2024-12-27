@@ -4,7 +4,9 @@ import streamlit as st
 import requests
 import logging
 import matplotlib.pyplot as plt
-import sys
+from fastapi import FastAPI
+
+app = FastAPI()
 
 
 def main():
@@ -96,5 +98,3 @@ def main():
         
 if __name__ == "__main__":
     main()
-
-st.write(sys.version)
