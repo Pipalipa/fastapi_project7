@@ -136,3 +136,5 @@ watchdog==6.0.0
 zipp==3.21.0
     # via importlib-resources
 waitress
+gunicorn
+uvicorn
