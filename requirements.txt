@@ -124,7 +124,7 @@ rich-toolkit==0.12.0
 rpds-py==0.22.3
 rsa==4.9
 scikit-learn==1.5.2
-scipy==1.9.3
+scipy==1.10.0
 selenium==4.27.1
 semver==3.0.2
 shap==0.46.0
