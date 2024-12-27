@@ -140,3 +140,4 @@ gunicorn
 uvicorn
 fastapi
 joblib
+shap==0.41.0
