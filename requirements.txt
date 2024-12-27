@@ -142,4 +142,4 @@ fastapi
 joblib
 shap==0.41.0
 evidently
-xgboost==1.2.1
+xgboost==2.1.3
