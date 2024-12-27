@@ -22,3 +22,4 @@ requirements.txt.old
 df_test1.csv
 *.dll
 *.exe
+.git/
