@@ -19,7 +19,6 @@ databricks-sdk==0.39.0
 Deprecated==1.2.15
 deprecation==2.1.0
 distro==1.9.0
-docker==7.1.0
 dynaconf==3.2.6
 evidently
 exceptiongroup==1.2.2
@@ -92,7 +91,7 @@ pyparsing==3.2.0
 python-dateutil==2.9.0.post0
 python-dotenv==1.0.1
 pytz==2024.2
-pywin32==308
+pywin32==227
 PyYAML==6.0.2
 referencing==0.35.1
 regex==2024.11.6
