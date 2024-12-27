@@ -139,3 +139,4 @@ waitress
 gunicorn
 uvicorn
 fastapi
+joblib
