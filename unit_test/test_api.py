@@ -5,11 +5,13 @@ import pytest
 from fastapi.testclient import TestClient
 import json
 import pytest
+import sys
 
 import warnings
 
 warnings.simplefilter("ignore", DeprecationWarning)
 
+sys.path.append("../")
 
 from api3 import app
 
