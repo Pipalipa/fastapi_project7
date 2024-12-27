@@ -4,6 +4,7 @@ import streamlit as st
 import requests
 import logging
 import matplotlib.pyplot as plt
+import sys
 
 
 def main():
@@ -95,3 +96,5 @@ def main():
         
 if __name__ == "__main__":
     main()
+
+st.write(sys.version)
