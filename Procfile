@@ -1,1 +1,1 @@
-web: streamlit run app3.py
+web: gunicorn -w 4 -k uvicorn.workers.UvicornWorker app3:app
