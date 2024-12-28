@@ -12,12 +12,12 @@ import os
 app = FastAPI()
 
 current_directory = os.path.dirname(os.path.abspath(__file__))
-model_path = os.path.join(current_directory, "Best_model", "XGB_classifier_model.joblib")
+model_path = os.path.join(current_directory, "..", "Best_model", "XGB_classifier_model.joblib")
 # Charger le modèle
 model = joblib.load(model_path)
 
 # Charger des données
-csv_path = os.path.join(current_directory, "Data", "df_train1.csv")
+csv_path = os.path.join(current_directory, "..", "Data", "df_train1.csv")
 data = pd.read_csv(csv_path)
 
 data['SK_ID_CURR'] = data['SK_ID_CURR'].astype(str)
