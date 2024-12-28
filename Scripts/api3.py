@@ -17,7 +17,7 @@ model_path = os.path.join(current_directory, "..", "Best_model", "XGB_classifier
 model = joblib.load(model_path)
 
 # Charger des données
-csv_path = os.path.join(current_directory, "..", "Data", "df_train1.csv")
+csv_path = os.path.join(current_directory, "..", "Data", "df_train1_utf8.csv")
 data = pd.read_csv(csv_path)
 
 data['SK_ID_CURR'] = data['SK_ID_CURR'].astype(str)

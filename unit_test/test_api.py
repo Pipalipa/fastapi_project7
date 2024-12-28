@@ -13,7 +13,7 @@ warnings.simplefilter("ignore", DeprecationWarning)
 
 sys.path.append("../")
 
-from api3 import app
+from Scripts.api3 import app
 
 @pytest.fixture
 def current_dir():
@@ -39,7 +39,7 @@ def test_chargement_modele(current_dir):
 
 def test_chargement_csv(current_dir):
     # Charger des données
-    csv_path = os.path.join(current_dir, "..", "Data", "df_train1.csv")
+    csv_path = os.path.join(current_dir, "..", "Data", "df_train1_utf8.csv")
     data = pd.read_csv(csv_path)
     #test fail
     # data = None
@@ -50,7 +50,7 @@ def test_prediction(current_dir, client):
     import os
     import pandas as pd
     # Détermine le chemin du fichier CSV contenant les données de test
-    csv_path = os.path.join(current_dir, "..", "Data", "df_train1.csv")
+    csv_path = os.path.join(current_dir, "..", "Data", "df_train1_utf8.csv")
     # Chargement des données
     data = pd.read_csv(csv_path)
     # Sample SK_ID_CURR for testing

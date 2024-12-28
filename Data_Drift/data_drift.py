@@ -7,7 +7,7 @@ import pandas as pd
 import numpy as np
 
 def generate_data_drift_report(input_file: str, output_file: str):
-    df = pd.read_csv('df_train1.csv', sep = ",")
+    df = pd.read_csv('df_train1_utf8.csv', sep = ",")
 
     application_train = df.sample(n=5000, replace=False)
     application_test = df.sample(n=5000, replace=False)
@@ -63,4 +63,4 @@ def generate_data_drift_report(input_file: str, output_file: str):
     data_drift_report.show()
 
 if __name__ == "__main__":
-    generate_data_drift_report("df_train1.csv", "data_drift_report.html")
+    generate_data_drift_report("df_train1_utf8.csv", "data_drift_report.html")
