@@ -1,5 +1,0 @@
-build:
-  docker:
-    web: Dockerfile
-  config:
-    REQUIREMENTS_PATH: backend/requirements.txt
