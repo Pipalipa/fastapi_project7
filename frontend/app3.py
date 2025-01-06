@@ -26,7 +26,8 @@ def main():
         if sk_id_curr:
             try:
                 # Appeler l'API avec top_n comme paramètre de requête
-                api_url = "http://127.0.0.1:8000/predict/"
+                # api_url = "http://127.0.0.1:8000/predict/"
+                api_url = "https://fastapi-project7.onrender.com/predict/"
                 response = requests.post(api_url, params={"sk_id_curr": sk_id_curr, "top_n": top_n}, timeout=30)  # Augmenter timeout
 
                 logging.debug(f"Réponse de l'API: {response.status_code}")
@@ -71,7 +72,7 @@ def main():
             st.error("Veuillez saisir un numéro de client valide.")
 
     if st.button("Générer un rapport de dérive des données"):
-        api_url = "http://127.0.0.1:8000/data-drift-report/"
+        api_url = "https://fastapi-project7.onrender.com/data-drift-report/"
         response = requests.get(api_url)
 
         if response.status_code == 200:
