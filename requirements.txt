@@ -1,4 +1,4 @@
 pytest
 joblib==1.4.2
-selenium==selenium-4.27.1
+selenium==4.27.1
 pandas==2.2.3
