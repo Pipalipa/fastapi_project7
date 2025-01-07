@@ -21,16 +21,16 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     steps:
-      - name: Checkon code
+      - name: Check out code
         uses: actions/checkout@v3
 
       - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
 
       - name: Install dependencies
         run: python -m pip install pytest .
 
-      - name: Run unit_test
+      - name: Run unit tests
         run: pytest
