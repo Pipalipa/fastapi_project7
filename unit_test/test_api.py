@@ -55,7 +55,7 @@ def test_prediction(current_dir, client):
     data = pd.read_csv(csv_path)
     # Sample SK_ID_CURR for testing
     # sk_id_curr = data.iloc[0]['SK_ID_CURR']
-    sk_id_curr = "136718" 
+    sk_id_curr = "100002" 
     top_n = 10 
     # Crée une requête de test pour la prédiction en utilisant l'échantillon sélectionné
     response = client.post("/predict", params={"sk_id_curr": sk_id_curr, "top_n": top_n})
