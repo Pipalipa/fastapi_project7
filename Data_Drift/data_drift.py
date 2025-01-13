@@ -31,7 +31,7 @@ def generate_data_drift_report(input_file: str, output_file: str):
 
     start_time = time.time()
 
-    # Vérifiez que vos deux DataFrames ont exactement les mêmes colonnes
+    # Vérifiez que les deux DataFrames ont exactement les mêmes colonnes
     assert set(application_train.columns) == set(application_test.columns)
 
     # Si l'assertion est réussie, cela signifie que les colonnes correspondent
@@ -57,7 +57,7 @@ def generate_data_drift_report(input_file: str, output_file: str):
     elapsed_time_fit = time.time() - start_time
     print(elapsed_time_fit)
 
-    # # Sauvegardez le rapport en tant que fichier HTML
+    # Sauvegarder le rapport en tant que fichier HTML
     data_drift_report.save_html('data_drift_report.html')
 
     data_drift_report.show()
