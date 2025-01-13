@@ -14,21 +14,11 @@ def generate_data_drift_report(input_file: str, output_file: str):
 
     # application_train = df.dropna(subset=['TARGET']).drop(columns=['SK_ID_CURR','TARGET','ACTIVE_AMT_CREDIT_SUM_OVERDUE_MEAN','ACTIVE_AMT_CREDIT_SUM_MEAN', 'ACTIVE_CNT_CREDIT_PROLONG_MEAN'])
     # application_test = df[df['TARGET'].isna()].drop(columns=['SK_ID_CURR','TARGET', 'ACTIVE_AMT_CREDIT_SUM_OVERDUE_MEAN','ACTIVE_AMT_CREDIT_SUM_MEAN', 'ACTIVE_CNT_CREDIT_PROLONG_MEAN'])
+    numerical_columns = [col for col in application_train.columns if application_train[col].dtype in ['float64', 'int64']]
 
-    # #Pour les colonnes catégorielles on va ne prendre que les colonnes ayant que des 0 et des 1 
-    categorical_columns = []
-
-    # Parcourir chaque colonne
-    for col in application_train.columns:
-        # Récupérer les valeurs uniques de la colonne
-        unique_vals = set(application_train[col].unique())
+    categorical_columns = [col for col in application_train.columns if application_train[col].dtype == 'object']
         
-        # Vérifier si les valeurs uniques sont uniquement 0, 1, et potentiellement NaN
-        if unique_vals.issubset({0, 1, np.nan}):
-            categorical_columns.append(col)
-
-    numerical_columns = [col for col in application_train.columns if col not in categorical_columns]
-
+    
     start_time = time.time()
 
     # Vérifiez que les deux DataFrames ont exactement les mêmes colonnes
