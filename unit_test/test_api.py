@@ -11,7 +11,7 @@ import warnings
 
 warnings.simplefilter("ignore", DeprecationWarning)
 
-sys.path.append("../")
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'backend')))
 
 from backend.api3 import app
 
