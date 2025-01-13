@@ -6,7 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 def test_streamlit_app():
     # Configurer le WebDriver
     options = webdriver.ChromeOptions()
-    # options.add_argument("--headless")
+    options.add_argument("--headless")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
     driver = webdriver.Chrome(options=options)
