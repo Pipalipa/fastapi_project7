@@ -4,6 +4,10 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 def test_streamlit_app():
+    subprocess.Popen(["streamlit", "run", "frontend/app3.py"])
+
+    time.sleep(5)
+    
     # Configurer le WebDriver
     options = webdriver.ChromeOptions()
     options.add_argument("--headless")
