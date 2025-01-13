@@ -13,7 +13,7 @@ warnings.simplefilter("ignore", DeprecationWarning)
 
 sys.path.append("../")
 
-from Scripts.api3 import app
+from backend.api3 import app
 
 @pytest.fixture
 def current_dir():
